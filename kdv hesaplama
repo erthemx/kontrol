@@ -1,0 +1,13 @@
+            double birimfiyati = Convert.ToDouble(textBox1.Text);
+            double KDV;
+            double satışFiyatı;
+
+            if (checkBox1.Checked== true)
+            {
+                satışFiyatı=birimfiyati+(birimfiyati *0.18 / 100);
+            }
+            else
+            {
+                satışFiyatı = birimfiyati;
+            }
+            textBox2.Text = satışFiyatı.ToString();
