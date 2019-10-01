@@ -1,0 +1,16 @@
+        private void btnkontrolet_Click(object sender, EventArgs e)
+        {
+            int sayı;
+            sayı = Convert.ToInt32(txtsayı.Text);
+            if (sayı < 100)
+            {
+                MessageBox.Show("girdginiz sayı 100 den küçük");
+            }
+            else if (sayı == 100)
+            {
+                MessageBox.Show("Girdğiniz sayı 100 e eşit");
+            }
+            else
+            {
+                MessageBox.Show("Girdğiniz sayı 100 den buyuk");
+            }
