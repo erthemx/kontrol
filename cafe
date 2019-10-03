@@ -1,0 +1,39 @@
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void chksu_CheckedChanged(object sender, EventArgs e)
+        {
+
+            nmsu.Visible = chksu.Checked;
+         
+        }
+
+        private void chkcay_CheckedChanged(object sender, EventArgs e)
+        {
+            snmçay.Visible = chkcay.Checked;
+
+        }
+
+        private void chkportakalsuyu_CheckedChanged(object sender, EventArgs e)
+        {
+            snmportsu.Visible = chkportakalsuyu.Checked;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double toplam = 0;
+            if (chksu.Checked) 
+            {
+                toplam = toplam + Convert.ToDouble(nmsu.Value) * 5;
+            }
+            if (chkcay.Checked) 
+            {
+                toplam = toplam + Convert.ToDouble(snmçay.Value) * 10;
+            }
+            if (chkportakalsuyu.Checked)
+            {
+                toplam = toplam + Convert.ToDouble(snmportsu.Value) * 20;
+            }
+            MessageBox.Show(toplam.ToString());
