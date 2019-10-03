@@ -1,0 +1,34 @@
+        private void btnfaturaolustur_Click(object sender, EventArgs e)
+        {
+            lblfaturaolustur.Text = "Fatura Özeti\n-------------------\n"+txturuncod.Text +" "+txturunname.Text
+                +" "+ txtbırımfıyat.Text+"x"+ nmadet.Value.ToString();
+
+            int adet = Convert.ToInt32(nmadet.Value);
+            double birimfiyat = Convert.ToDouble(txtbırımfıyat.Text);
+            double kdvsiztoplamFiyat = adet * birimfiyat;
+            double kdvlitoplamFiyat = 0;
+            double KDV = 0;
+            if (chkKDVuygula.Checked)
+            {
+                if (rd5.Checked)
+                {
+                    KDV = 0.05;
+                }
+                else if (rd8.Checked)
+                {
+                    KDV = 0.08;
+                }
+                else
+                {
+                    KDV = 0.18;
+                }
+            }
+            kdvlitoplamFiyat = kdvsiztoplamFiyat + (kdvsiztoplamFiyat * KDV);
+            lblfaturaolustur.Text += " " + kdvlitoplamFiyat.ToString();
+
+        }
+
+        private void chkKDVuygula_CheckedChanged(object sender, EventArgs e)
+        {
+            panel1.Visible = chkKDVuygula.Checked;
+        }
