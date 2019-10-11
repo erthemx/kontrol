@@ -1,0 +1,21 @@
+            int index = listBox1.SelectedIndex;
+            if (index == 0)
+            {
+                pictureBox1.Image = Properties.Resources.aslan;
+            }
+            else if (index == 1)
+            {
+                pictureBox1.Image = Properties.Resources.kaplan;
+            }
+            else if (index==2 )
+            {
+                pictureBox1.Image = Properties.Resources.kedi;
+            }
+            else if (index == 3)
+            {
+                pictureBox1.Image = Properties.Resources.kopek;
+            }
+            else  
+            {
+                pictureBox1.Image = Properties.Resources.panda;
+            }
