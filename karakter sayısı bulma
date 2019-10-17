@@ -1,0 +1,14 @@
+        private void txtname_KeyDown(object sender, EventArgs e)
+        {
+          if(e.KeyCode==Keys.Enter)
+          {
+              comboBox1.Items.Add(txtname.Text);
+          }
+          txtname.Clear();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label4.Text = Convert.ToString(comboBox1.SelectedIndex+1);
+            label5.Text = comboBox1.Text.Length.ToString();
+        }
